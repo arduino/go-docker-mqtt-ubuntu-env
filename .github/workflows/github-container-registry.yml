@@ -17,7 +17,7 @@ jobs:
       uses: docker/login-action@master
       with:
         registry: ghcr.io
-        username: arduinobot
+        username: ArduinoBot
         password: ${{ secrets.CR_PAT }}
 
     - name: Publish
