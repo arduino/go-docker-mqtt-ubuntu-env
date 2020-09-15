@@ -17,7 +17,7 @@ jobs:
       uses: docker/login-action@master
       with:
         registry: ghcr.io
-        username: ${{ github.repository_owner }}
+        username: arduinobot
         password: ${{ secrets.CR_PAT }}
 
     - name: Publish
