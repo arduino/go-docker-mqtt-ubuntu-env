@@ -1,0 +1,20 @@
+name: GitHub Docker Container
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build and Publish head Docker image
+      uses: VaultVulp/gp-docker-action@1.1.7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        image-name: go-docker-mqtt-ubuntu-env
+        image-tag: latest
