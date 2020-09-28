@@ -11,6 +11,7 @@ RUN         apt install -y  \
             curl            \
             gcc             \
             mosquitto       \
+            tzdata          \
             docker.io
 
 RUN         curl -O https://dl.google.com/go/go1.15.2.linux-amd64.tar.gz
